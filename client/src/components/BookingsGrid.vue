@@ -32,12 +32,15 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  opacity: 0.9;
 }
+
 .booking {
   width: 30%;
   background: #B8A6C5;
   margin-bottom: 20px;
   padding: 25px;
+  text-align: center;
 }
 
 button{
@@ -46,6 +49,5 @@ button{
   font-size: 14px;
   padding: 10px;
   margin-top: 10px;
-  /* background: #C5A8A6; */
 }
 </style>

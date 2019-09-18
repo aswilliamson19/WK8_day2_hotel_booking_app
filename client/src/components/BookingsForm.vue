@@ -18,18 +18,13 @@
     </div>
     <div class="formWrap">
       <p>Is it a special occassion?
-      <input type="checkbox"
-              v-model="special_occassion"
-              true-value="yes"
-              false-value="no"
-      ></p>
+      <input type="checkbox" v-model="special_occassion" true-value="yes" false-value="no"></p>
     </div>
     <input type="submit" id="save" value="Save"/>
   </form>
 </template>
 
 <script>
-
 import { eventBus } from '../main.js'
 import BookingsService from '../services/BookingsService.js';
 
@@ -65,12 +60,13 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
 h2 {
   margin: 10px 0;
   padding: 4px;
   font-family: 'Shrikhand', cursive;
-
 }
+
 form {
   text-align: center;
   width: 35%;
@@ -79,14 +75,14 @@ form {
   padding:  20px;
   margin-bottom:  40px;
   font-family: 'Shrikhand', cursive;
-
+  opacity: 0.9;
 }
+
 #save{
   color: #C5A8A6;
   border: none;
   font-size: 14px;
   padding: 10px;
   margin-top: 10px;
-  /* background: #C5A8A6; */
 }
 </style>

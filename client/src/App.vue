@@ -45,23 +45,19 @@ export default {
 </script>
 
 <style lang="css" scoped>
-/* html {
-  height: 100%;
-} */
+
 #app{
-  background: url('./assets/hotel.jpg') no-repeat;
+  background: url('./assets/background-image.jpg') no-repeat;
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Shrikhand', cursive;
-
 }
 
 h1 {
   text-align: center;
   font-family: 'Shrikhand', cursive;
   color: white;
-
 }
 </style>
