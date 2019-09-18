@@ -17,12 +17,12 @@
       <input type="radio" id="false" name="checked_in" v-bind:value="false" v-model="check_in_status">
     </div>
     <div class="formWrap">
-      <p>Is it a special occassion?</p>
+      <p>Is it a special occassion?
       <input type="checkbox"
               v-model="special_occassion"
               true-value="yes"
               false-value="no"
-      >
+      ></p>
     </div>
     <input type="submit" id="save" value="Save"/>
   </form>
@@ -64,4 +64,28 @@ export default {
 </script>
 
 <style lang="css" scoped>
+h2 {
+  margin: 10px 0;
+  padding: 4px;
+  font-family: 'Shrikhand', cursive;
+
+}
+form {
+  text-align: center;
+  width: 35%;
+  margin: 0 auto;
+  background: #A6C3C5;
+  padding:  20px;
+  margin-bottom:  40px;
+  font-family: 'Shrikhand', cursive;
+
+}
+#save{
+  color: #C5A8A6;
+  border: none;
+  font-size: 14px;
+  padding: 10px;
+  margin-top: 10px;
+  /* background: #C5A8A6; */
+}
 </style>

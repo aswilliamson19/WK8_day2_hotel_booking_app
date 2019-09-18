@@ -1,5 +1,6 @@
 <template lang="html">
   <div id="app">
+    <h1>Shangrila Hotel Booking System</h1>
     <bookings-form/>
     <bookings-grid :bookings="bookings"/>
   </div>
@@ -44,4 +45,23 @@ export default {
 </script>
 
 <style lang="css" scoped>
+/* html {
+  height: 100%;
+} */
+#app{
+  background: url('./assets/hotel.jpg') no-repeat;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Shrikhand', cursive;
+
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Shrikhand', cursive;
+  color: white;
+
+}
 </style>

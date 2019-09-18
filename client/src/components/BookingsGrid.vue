@@ -27,4 +27,25 @@ export default {
 </script>
 
 <style lang="css" scoped>
+#bookingsGrid{
+  font-family: 'Shrikhand', cursive;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.booking {
+  width: 30%;
+  background: #B8A6C5;
+  margin-bottom: 20px;
+  padding: 25px;
+}
+
+button{
+  color: #C5A8A6;
+  border: none;
+  font-size: 14px;
+  padding: 10px;
+  margin-top: 10px;
+  /* background: #C5A8A6; */
+}
 </style>
