@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     fetchData(){
-      BookingService.getBookings()
+      BookingsService.getBookings()
       .then(bookings => this.bookings = bookings);
     }
   }
