@@ -1,9 +1,10 @@
 <template lang="html">
   <div id="bookingsGrid">
     <div class="booking" v-for="booking in bookings">
-      <h2>{{ booking.guest_name }}</h2>
-      <p>{{ booking.guest_email }}</p>
-      <p>{{ booking.check_in_status }}</p>
+      <h2>Guest name: {{ booking.guest_name }}</h2>
+      <p>Guest e-mail: {{ booking.guest_email }}</p>
+      <p>Special occassions: {{ booking.special_occassion }}</p>
+      <p>Checked in: {{ booking.check_in_status }}</p>
       <button v-on:click="handleDelete(booking._id)">Delete booking</button>
     </div>
   </div>

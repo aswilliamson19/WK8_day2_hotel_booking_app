@@ -12,9 +12,17 @@
     <div class="formWrap">
       <p>Is the guest checked in?</p>
       <label for="true">Yes </label>
-      <input type="radio" id="true" name="checked_in" value=true v-model="check_in_status">
+      <input type="radio" id="true" name="checked_in" v-bind:value="true" v-model="check_in_status">
       <label for="false">No</label>
-      <input type="radio" id="false" name="checked_in" value=false v-model="check_in_status">
+      <input type="radio" id="false" name="checked_in" v-bind:value="false" v-model="check_in_status">
+    </div>
+    <div class="formWrap">
+      <p>Is it a special occassion?</p>
+      <input type="checkbox"
+              v-model="special_occassion"
+              true-value="yes"
+              false-value="no"
+      >
     </div>
     <input type="submit" id="save" value="Save"/>
   </form>
@@ -31,7 +39,8 @@ export default {
     return{
       guest_name: "",
       guest_email: "",
-      check_in_status: null
+      check_in_status: null,
+      special_occassion: null
     }
   },
   methods:{
@@ -41,7 +50,8 @@ export default {
       const payload = {
         guest_name: this.guest_name,
         guest_email: this.guest_email,
-        check_in_status: this.check_in_status
+        check_in_status: this.check_in_status,
+        special_occassion: this.special_occassion
       };
 
       BookingsService.postBooking(payload)
