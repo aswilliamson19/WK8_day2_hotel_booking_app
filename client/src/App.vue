@@ -9,7 +9,7 @@
 import BookingsForm from './components/BookingsForm';
 import BookingsGrid from './components/BookingsGrid';
 import {eventBus } from './main.js';
-import BookingService from './services/BookingService';
+import BookingsService from './services/BookingsService';
 
 export default {
   name: 'app',
@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     fetchData(){
-      BookingService.getBookings();
+      BookingService.getBookings()
       .then(bookings => this.bookings = bookings);
     }
   }

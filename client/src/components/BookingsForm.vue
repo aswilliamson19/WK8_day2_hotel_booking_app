@@ -11,18 +11,19 @@
     </div>
     <div class="formWrap">
       <p>Is the guest checked in?</p>
-      <label for="check_in_status">Yes </label>
-      <input type="radio" id="yes" name="checked_in">
-      <label for="check_in_status">No</label>
-      <input type="radio" id="no" name="checked_in">
+      <label for="true">Yes </label>
+      <input type="radio" id="true" name="checked_in" value=true v-model="check_in_status">
+      <label for="false">No</label>
+      <input type="radio" id="false" name="checked_in" value=false v-model="check_in_status">
     </div>
+    <input type="submit" id="save" value="Save"/>
   </form>
 </template>
 
 <script>
 
 import { eventBus } from '../main.js'
-import BookingService from '../services/BookingsService.js';
+import BookingsService from '../services/BookingsService.js';
 
 export default {
   name: "bookings-form",
