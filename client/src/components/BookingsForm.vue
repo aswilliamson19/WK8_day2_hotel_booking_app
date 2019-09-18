@@ -3,18 +3,18 @@
     <h2> Add a Booking</h2>
     <div class="formWrap">
       <label for="guest_name">Guest Name: </label>
-      <input type="text" id="guest_name" v-model="guest_name" />
+      <input type="text" id="guest_name" v-model="guest_name" required />
     </div>
     <div class="formWrap">
       <label for="guest_email">Guest Email: </label>
-      <input type="text" id="guest_email" v-model="guest_email"/>
+      <input type="text" id="guest_email" v-model="guest_email" required />
     </div>
     <div class="formWrap">
       <p>Is the guest checked in?</p>
       <label for="true">Yes </label>
-      <input type="radio" id="true" name="checked_in" v-bind:value="true" v-model="check_in_status">
+      <input type="radio" id="true" name="checked_in" v-bind:value="true" v-model="check_in_status" required>
       <label for="false">No</label>
-      <input type="radio" id="false" name="checked_in" v-bind:value="false" v-model="check_in_status">
+      <input type="radio" id="false" name="checked_in" v-bind:value="false" v-model="check_in_status" required>
     </div>
     <div class="formWrap">
       <p>Is it a special occassion?
@@ -46,6 +46,7 @@ export default {
   methods:{
     handleSubmit(event){
       event.preventDefault()
+      {document.getElementById("bookings-form").reset()}
 
       const payload = {
         guest_name: this.guest_name,
